@@ -75,8 +75,13 @@
           送信が完了しました。担当者より原則3営業日以内にご連絡いたします。
           内容によっては、お時間をいただく場合がございます。あらかじめご了承ください。
         </div>
+        <div class="form-error" id="form-error" role="alert">
+          <b>送信に失敗しました。</b>
+          通信状況などにより送信できなかった可能性があります。お手数ですが、しばらくしてから再度お試しください。
+        </div>
 
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="https://formspree.io/f/mdavjovj" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="【NPRD】お問合せ">
           <div class="field">
             <label for="f-name">お名前 <span class="req">必須</span></label>
             <input id="f-name" name="name" type="text" required placeholder="山田 太郎">

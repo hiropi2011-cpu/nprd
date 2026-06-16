@@ -50,17 +50,42 @@
     });
   });
 
-  // -------- Contact form fake submit --------
+  // -------- Contact form: submit to Formspree via fetch, no page redirect --------
   const form = document.querySelector('#contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const success = document.querySelector('#form-success');
-      if (success) {
-        success.classList.add('is-visible');
-        form.querySelectorAll('input, textarea, select, button').forEach(el => el.setAttribute('disabled', 'disabled'));
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+      const errorEl = document.querySelector('#form-error');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.setAttribute('disabled', 'disabled');
+      if (errorEl) errorEl.classList.remove('is-visible');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      })
+        .then(res => {
+          if (res.ok) {
+            if (success) {
+              success.classList.add('is-visible');
+              form.querySelectorAll('input, textarea, select, button').forEach(el => el.setAttribute('disabled', 'disabled'));
+              success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          } else {
+            throw new Error('Formspree response not ok');
+          }
+        })
+        .catch(() => {
+          if (submitBtn) submitBtn.removeAttribute('disabled');
+          if (errorEl) {
+            errorEl.classList.add('is-visible');
+            errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            alert('送信に失敗しました。お手数ですが、しばらくしてから再度お試しください。');
+          }
+        });
     });
   }
 })();
