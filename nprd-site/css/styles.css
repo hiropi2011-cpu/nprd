@@ -72,15 +72,26 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 /* ---------- Header ---------- */
+/* Note: backdrop-filter lives on ::before, not on .site-header itself.
+   A filter/backdrop-filter on an ancestor creates a new containing block
+   for position:fixed descendants — that broke the full-screen mobile
+   nav overlay (.site-nav), which is also position:fixed and nested
+   inside .site-header. Keeping .site-header filter-free fixes it. */
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--header-h);
+  border-bottom: 1px solid var(--ink-100);
+  z-index: 100;
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
-  border-bottom: 1px solid var(--ink-100);
-  z-index: 100;
+  z-index: -1;
 }
 .site-header__inner {
   display: flex;
