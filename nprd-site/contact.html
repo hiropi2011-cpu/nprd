@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問合せ｜NPRD - 次世代教育学研究開発株式会社</title>
+<meta name="description" content="NPRDへの資料請求・導入相談・モニター校のお問合せはこちらから。原則3営業日以内に担当者よりご連絡いたします。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="index.html" class="site-header__logo" aria-label="NPRD ホーム">
+      <img src="assets/legacy/logo-mark.webp" alt="NPRD - 次世代教育学研究開発株式会社">
+    </a>
+    <button class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ul class="site-nav__list">
+        <li><a href="index.html" class="site-nav__link">HOME</a></li>
+        <li><a href="vision.html" class="site-nav__link">Vision</a></li>
+        <li><a href="products.html" class="site-nav__link">プロダクト</a></li>
+        <li><a href="company.html" class="site-nav__link">会社案内</a></li>
+        <li><a href="investor.html" class="site-nav__link">投資家情報</a></li>
+        <li><a href="contact.html" class="site-nav__cta is-active">お問合せ <span class="arrow">→</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="subpage-hero subpage-hero--contact">
+  <div class="container subpage-hero__inner fade-in">
+    <span class="subpage-hero__en">CONTACT</span>
+    <h1 class="subpage-hero__title">お問合せ・資料請求</h1>
+    <p class="subpage-hero__sub">
+      NPRDへのご相談・資料請求・モニター校に関するお問合せは、こちらのフォームよりお気軽にご連絡ください。<br>
+      原則3営業日以内に、担当者よりご連絡いたします。
+    </p>
+  </div>
+</section>
+
+<section class="section section--blue-tint">
+  <div class="container">
+    <div class="contact-wrap">
+
+      <aside class="contact-info fade-in">
+        <h2 class="contact-info__title">お問合せは<br>こちらのフォームから。</h2>
+        <p class="contact-info__text">
+          資料請求・導入のご相談・モニター校のお申込みなど、
+          右のフォームよりお気軽にご連絡ください。
+          原則3営業日以内に、担当者よりご返信いたします。
+        </p>
+        <div class="contact-info__item">
+          <div class="contact-info__label">COMPANY</div>
+          <div class="contact-info__value">次世代教育学研究開発株式会社<br>(NPRD)</div>
+        </div>
+        <div class="contact-info__item">
+          <div class="contact-info__label">ADDRESS</div>
+          <div class="contact-info__value">〒104-0061<br>東京都中央区銀座7-5-4<br>毛利ビル 6F</div>
+        </div>
+        <div class="contact-info__item">
+          <div class="contact-info__label">RESPONSE TIME</div>
+          <div class="contact-info__value">原則3営業日以内に<br>担当者よりご連絡いたします</div>
+        </div>
+      </aside>
+
+      <div class="contact-form fade-in delay-1">
+        <div class="form-success" id="form-success" role="status">
+          <b>お問合せありがとうございました。</b>
+          送信が完了しました。担当者より原則3営業日以内にご連絡いたします。
+          内容によっては、お時間をいただく場合がございます。あらかじめご了承ください。
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">お名前 <span class="req">必須</span></label>
+            <input id="f-name" name="name" type="text" required placeholder="山田 太郎">
+          </div>
+          <div class="field">
+            <label for="f-org">学校名・会社名 <span class="req">必須</span></label>
+            <input id="f-org" name="org" type="text" required placeholder="○○通信制高等学校">
+          </div>
+          <div class="field">
+            <label for="f-email">メールアドレス <span class="req">必須</span></label>
+            <input id="f-email" name="email" type="email" required placeholder="example@school.jp">
+          </div>
+          <div class="field">
+            <label for="f-tel">電話番号</label>
+            <input id="f-tel" name="tel" type="tel" placeholder="03-0000-0000">
+          </div>
+          <div class="field">
+            <label for="f-topic">お問合せ種別 <span class="req">必須</span></label>
+            <select id="f-topic" name="topic" required>
+              <option value="">選択してください</option>
+              <option>資料請求</option>
+              <option>導入のご相談</option>
+              <option>モニター校としての無償お試し</option>
+              <option>SS-Pad について</option>
+              <option>SUMASUKU について</option>
+              <option>SS-Check について</option>
+              <option>SS-Manager について</option>
+              <option>投資家・株主の皆様より</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-msg">お問合せ内容 <span class="req">必須</span></label>
+            <textarea id="f-msg" name="message" required placeholder="ご要望・ご質問などを自由にご記入ください"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn--primary">送信する <span class="arrow">→</span></button>
+            <p class="form-note">送信前に <a href="#" style="color:var(--brand-blue);">プライバシーポリシー</a> をご確認ください。</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--dark">
+  <div class="container" style="text-align:center;">
+    <div class="fade-in" style="max-width:720px; margin:0 auto;">
+      <img src="assets/img/contact-illust.jpg" alt="サポートイメージ" style="border-radius:var(--radius-lg); margin-bottom:32px;">
+      <h2 style="font-size:clamp(22px,2.4vw,30px); font-weight:800; color:#fff; margin-bottom:16px;">通信制高校のICT化、<br>まずは一度お話しませんか。</h2>
+      <p style="font-size:15px; color:rgba(255,255,255,0.78); line-height:1.95;">
+        資料請求から導入後の運用まで、専任の担当者が一貫してサポートいたします。
+        どのプロダクトから始めるべきか分からない、というご相談もお気軽にどうぞ。
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <img src="assets/legacy/logo-mark.webp" alt="NPRD">
+        <p class="site-footer__company">
+          次世代教育学研究開発株式会社<br>
+          NextAge Pedagogy Research and development<br>
+          〒104-0061 東京都中央区銀座7-5-4 毛利ビル 6F
+        </p>
+      </div>
+      <div>
+        <h4 class="site-footer__col-title">Sitemap</h4>
+        <ul class="site-footer__list">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="vision.html">Vision</a></li>
+          <li><a href="products.html">プロダクト</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="site-footer__col-title">Company</h4>
+        <ul class="site-footer__list">
+          <li><a href="company.html">会社案内</a></li>
+          <li><a href="investor.html">投資家向け情報</a></li>
+          <li><a href="contact.html">お問合せ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="site-footer__col-title">Products</h4>
+        <ul class="site-footer__list">
+          <li><a href="products.html#sspad">SS-Pad</a></li>
+          <li><a href="products.html#sumasuku">SUMASUKU</a></li>
+          <li><a href="products.html#sscheck">SS-Check</a></li>
+          <li><a href="products.html#ssmanager">SS-Manager</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 NPRD All rights Reserved.</span>
+      <div class="site-footer__bottom-links">
+        <a href="#">プライバシーポリシー</a>
+        <a href="#">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
