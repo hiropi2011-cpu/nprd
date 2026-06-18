@@ -1285,3 +1285,48 @@ button { font-family: inherit; cursor: pointer; }
 
 /* selection */
 ::selection { background: var(--brand-blue); color: #fff; }
+
+/* ===========================================================
+   Legal pages (privacy.html / terms.html)
+   =========================================================== */
+.legal-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.legal-article {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(15,26,36,.06);
+}
+.legal-article__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--brand-blue-soft);
+}
+.legal-article p {
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink-700);
+  margin-bottom: 10px;
+}
+.legal-article p:last-child { margin-bottom: 0; }
+.legal-list {
+  font-size: 14.5px;
+  line-height: 1.95;
+  color: var(--ink-700);
+  padding-left: 1.4em;
+  margin: 10px 0;
+}
+.legal-list li { margin-bottom: 6px; }
+.legal-list--nested {
+  margin: 6px 0 6px 1em;
+  list-style-type: circle;
+}
+.legal-list--ordered {
+  list-style-type: decimal;
+}
